@@ -1,18 +1,31 @@
-# name of the workfolw
-name: first-workflow
-# Controls when the workflow will run
-# Allows you to run this workflow manually from the Actions tab
+name: NodeJS-project
 on: workflow_dispatch
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-# This workflow contains a single job called "first-job"
-  first-job:
-# The type of runner that the job will run on
+  firstjob-testing:
     runs-on: ubuntu-latest
-# Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: step1-helloMessage
-# Runs a single command using the runners shell
-        run: echo Hello, world!
-      - name: step2-byeMessage
-        run: echo bye, for now!
+      - name: Downloading Code-step-1
+        uses: actions/checkout@v3
+      - name: Install NodeJS-step-2
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install Dependencies-step-3
+        run: npm ci
+      - name: npm test-setep-4
+        run: npm test
+  Secondjob-Building:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Downloading Code-step-1
+        uses: actions/checkout@v3
+      - name: Install NodeJS-step-2
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install Dependencies-step-3
+        run: npm ci
+      - name: build project-step-4
+        run: npm run build
+      - name: Building some content .......ex-step-5
+	    run: echo "Build some content"
