@@ -27,5 +27,5 @@ jobs:
         run: npm ci
       - name: build project-step-4
         run: npm run build
-      - name: Building some content-step-5
-	run: echo "Build some content"
+#     - name: Building some content-step-5
+#	run: echo "Build some content"
