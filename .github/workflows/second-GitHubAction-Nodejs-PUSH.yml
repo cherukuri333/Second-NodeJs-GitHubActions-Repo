@@ -1,5 +1,5 @@
-name: Test project
-on: pull
+name: Test-NodeJS-Project
+on: push
 jobs:
   firstjob-test:
     runs-on: ubuntu-latest
