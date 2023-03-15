@@ -1,5 +1,5 @@
 name: Output Information on Github Events
-on: workflow_dispatch
+on: issues
 jobs:
   informationjob:
     runs-on: ubuntu-latest
