@@ -1,4 +1,4 @@
-name: Test-NodeJS-Project
+name: Event on PUSH
 on: push
 jobs:
   firstjob-test:
